@@ -191,8 +191,7 @@ def winning_team
         val2.length.times do |index|
           val2[index].each do |(key3,val3)|
             if key3 == :points && key == :home 
-
-              
+              total1+= val3
             end
           end
         end
