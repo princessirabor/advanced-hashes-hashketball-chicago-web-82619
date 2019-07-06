@@ -151,8 +151,8 @@ def big_shoe_rebounds
               if val3 > max
                 max = val3
                 i = index
-                rebound = val2[index][:rebound]
-                max_rebound_hash[:rebound] = val2[index][:rebound]
+                rebound = val2[index][:rebounds]
+                max_rebound_hash[:rebound] = val2[index][:rebounds]
               end
             end
           end
@@ -160,5 +160,8 @@ def big_shoe_rebounds
       end
     end
   end
+  p max
+  p i
+  p rebound
   rebound
 end
