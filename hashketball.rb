@@ -147,6 +147,8 @@ def big_shoe_rebounds
             if key3 == :shoe
               max = val3
               i= index
+              if val3 > max
+              end
             end
           end
         end
