@@ -190,7 +190,7 @@ def winning_team
       if key2 == :players
         val2.length.times do |index|
           val2[index].each do |(key3,val3)|
-            if key3 == :points && 
+            if key3 == :points && key == :home 
 
               
             end
