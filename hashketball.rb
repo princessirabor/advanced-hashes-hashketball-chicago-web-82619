@@ -138,6 +138,7 @@ end
 def big_shoe_rebounds
   max = -1
   i = -1
+  rebound = 0
   max_rebound_hash ={}
   game_hash.each do |(key,value)|
     value.each do |(key2,val2)|
@@ -145,9 +146,13 @@ def big_shoe_rebounds
         val2.times.do |index|
           val2[index].each do |(key3.val3)|
             if key3 == :shoe
-              max = val3
+              
               i= index
               if val3 > max
+                max = val3
+                i = index
+                rebound = val2[index][:rebound]
+                max_rebound_hash[:rebound] = val2[index][:rebound]
               end
             end
           end
@@ -155,4 +160,5 @@ def big_shoe_rebounds
       end
     end
   end
+  rebound
 end
