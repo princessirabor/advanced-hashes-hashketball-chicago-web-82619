@@ -160,17 +160,17 @@ end
 
 def most_points_scored
   max = -1
-  rebound = 0
+  playername = ""
   game_hash.each do |(key,value)|
     value.each do |(key2,val2)|
       if key2 == :players
         val2.length.times do |index|
           val2[index].each do |(key3,val3)|
-            if key3 == :shoe
+            if key3 == :points
 
               if val3 > max
                 max = val3
-                rebound = val2[index][:rebounds]
+                playername = val2[index][:player_name]
               end
             end
           end
@@ -178,5 +178,5 @@ def most_points_scored
       end
     end
   end
-  rebound
+  playername
 end
