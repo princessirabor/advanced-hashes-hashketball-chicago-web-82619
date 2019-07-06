@@ -183,18 +183,16 @@ end
 
 def winning_team
   total1 = -1
+  total2 = -1
   teamname = ""
   game_hash.each do |(key,value)|
     value.each do |(key2,val2)|
       if key2 == :players
         val2.length.times do |index|
           val2[index].each do |(key3,val3)|
-            if key3 == :points
+            if key3 == :points && 
 
-              if val3 > max
-                max = val3
-                teamname = value[:team_name]
-              end
+              
             end
           end
         end
