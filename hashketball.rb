@@ -193,7 +193,7 @@ def winning_team
 
               if val3 > max
                 max = val3
-                playername = val2[index][:player_name]
+                teamname = value[:team_name]
               end
             end
           end
@@ -201,5 +201,5 @@ def winning_team
       end
     end
   end
-  playername
+  teamname
 end
