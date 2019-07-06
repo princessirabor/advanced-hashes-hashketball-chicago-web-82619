@@ -143,7 +143,7 @@ def big_shoe_rebounds
   game_hash.each do |(key,value)|
     value.each do |(key2,val2)|
       if key2 == :players
-        val2.times.do |index|
+        val2.length.times do |index|
           val2[index].each do |(key3,val3)|
             if key3 == :shoe
               
