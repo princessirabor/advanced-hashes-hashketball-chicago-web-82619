@@ -183,7 +183,7 @@ end
 
 def winning_team
   max = -1
-  playername = ""
+  teamname = ""
   game_hash.each do |(key,value)|
     value.each do |(key2,val2)|
       if key2 == :players
