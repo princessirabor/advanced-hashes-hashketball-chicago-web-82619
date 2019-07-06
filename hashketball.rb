@@ -134,3 +134,19 @@ def player_stats(playername)
   resultHash.delete(:player_name)
   resultHash
 end
+
+def big_shoe_rebounds
+  max = -1
+  max_
+  game_hash.each do |(key,value)|
+    value.each do |(key2,val2)|
+      if key2 == :players
+        val2.times.do |index|
+          val2[index].each do |(key3.val3)|
+            
+          end
+        end
+      end
+    end
+  end
+end
