@@ -182,7 +182,7 @@ def most_points_scored
 end
 
 def winning_team
-  max = -1
+  total1 = -1
   teamname = ""
   game_hash.each do |(key,value)|
     value.each do |(key2,val2)|
