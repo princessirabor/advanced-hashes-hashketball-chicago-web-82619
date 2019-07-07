@@ -166,10 +166,10 @@ def most_points_scored
       if key2 == :players
         val2.length.times do |index|
           val2[index].each do |(key3,val3)|
-            if key3 == :points
+            if key3 == :player_name
 
-              if val3 > max
-                max = val3
+              if val3.length > max
+                max = val3.length
                 playername = val2[index][:player_name]
               end
             end
@@ -210,4 +210,27 @@ def winning_team
     teamname = teamname2
   end
   teamname
+end
+
+def player_with_longest_name
+  max = -1
+  playername = ""
+  game_hash.each do |(key,value)|
+    value.each do |(key2,val2)|
+      if key2 == :players
+        val2.length.times do |index|
+          val2[index].each do |(key3,val3)|
+            if key3 == :points
+
+              if val3 > max
+                max = val3
+                playername = val2[index][:player_name]
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  playername
 end
