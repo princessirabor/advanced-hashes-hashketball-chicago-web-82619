@@ -236,15 +236,16 @@ def most_points_scored
   playername
 end
 
-def most_points_scored
+def long_name_steals_a_ton?
   max = -1
+  playername_longest = player_with_longest_name
   playername = ""
   game_hash.each do |(key,value)|
     value.each do |(key2,val2)|
       if key2 == :players
         val2.length.times do |index|
           val2[index].each do |(key3,val3)|
-            if key3 == :points
+            if key3 == :steals
 
               if val3 > max
                 max = val3
