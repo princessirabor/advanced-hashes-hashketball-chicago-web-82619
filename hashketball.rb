@@ -193,6 +193,9 @@ def winning_team
             if key3 == :points && key == :home 
               total1+= val3
             end
+            if key3 == :points && key == :away
+              total2+= val3
+            end
           end
         end
       end
