@@ -184,7 +184,8 @@ end
 def winning_team
   total1 = -1
   total2 = -1
-  teamname = ""
+  teamname1 =""
+  teamname2 = ""
   game_hash.each do |(key,value)|
     value.each do |(key2,val2)|
       if key2 == :players
@@ -192,14 +193,21 @@ def winning_team
           val2[index].each do |(key3,val3)|
             if key3 == :points && key == :home 
               total1+= val3
+              teamname1 = value[:teamname]
             end
             if key3 == :points && key == :away
               total2+= val3
+              teamname2 = value[:teamname]
             end
           end
         end
       end
     end
+  end
+  if total1>total2
+    teamname = teamname1
+  else
+    teamname = teamname2
   end
   teamname
 end
