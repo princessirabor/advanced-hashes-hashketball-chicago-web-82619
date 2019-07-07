@@ -158,7 +158,8 @@ def big_shoe_rebounds
   rebound
 end
 
-def most_points_scored
+
+def player_with_longest_name
   max = -1
   playername = ""
   game_hash.each do |(key,value)|
@@ -212,7 +213,7 @@ def winning_team
   teamname
 end
 
-def player_with_longest_name
+def most_points_scored
   max = -1
   playername = ""
   game_hash.each do |(key,value)|
