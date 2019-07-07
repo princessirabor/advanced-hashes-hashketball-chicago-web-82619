@@ -182,8 +182,8 @@ def most_points_scored
 end
 
 def winning_team
-  total1 = -1
-  total2 = -1
+  total1 = 0
+  total2 = 0
   teamname1 =""
   teamname2 = ""
   game_hash.each do |(key,value)|
@@ -193,11 +193,11 @@ def winning_team
           val2[index].each do |(key3,val3)|
             if key3 == :points && key == :home 
               total1+= val3
-              teamname1 = value[:teamname]
+              teamname1 = value[:team_name]
             end
             if key3 == :points && key == :away
               total2+= val3
-              teamname2 = value[:teamname]
+              teamname2 = value[:team_name]
             end
           end
         end
